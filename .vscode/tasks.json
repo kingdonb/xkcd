@@ -1,0 +1,13 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build and Deploy",
+            "type": "shell",
+            "command": "docker buildx build --platform linux/amd64,linux/arm64 -t kingdonb/xkcd:latest . --push",
+            "group": "build"
+        }
+    ]
+  }
